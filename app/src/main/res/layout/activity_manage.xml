@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:padding="@dimen/margin16"
+	tools:context="com.example.firestore.MainActivity">
+
+	<EditText
+		android:id="@+id/edt_doc_id"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentTop="true"
+		android:layout_marginBottom="@dimen/margin16"
+		android:hint="@string/hint_doc_id"
+		android:inputType="textEmailAddress"/>
+
+	<ScrollView
+		android:id="@+id/body"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_above="@+id/zone_button"
+		android:layout_below="@+id/edt_doc_id"
+		android:scrollbars="none">
+
+		<TextView
+			android:id="@+id/tv"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/app_name"/>
+
+	</ScrollView>
+
+	<LinearLayout
+		android:id="@+id/zone_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btn_add_generated"
+				style="@style/MyButton"
+				android:text="@string/btn_add_generated"/>
+
+			<Button
+				android:id="@+id/btn_add_specific"
+				style="@style/MyButton"
+				android:text="@string/btn_add_specific"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btn_fetch_col"
+				style="@style/MyButton"
+				android:text="@string/btn_fetch_col"/>
+
+			<Button
+				android:id="@+id/btn_fetch_doc"
+				style="@style/MyButton"
+				android:text="@string/btn_fetch_doc"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btn_update_single"
+				style="@style/MyButton"
+				android:text="@string/btn_update_single"/>
+
+			<Button
+				android:id="@+id/btn_update_nested"
+				style="@style/MyButton"
+				android:text="@string/btn_update_nested"/>
+
+			<Button
+				android:id="@+id/btn_batch"
+				style="@style/MyButton"
+				android:text="@string/btn_batch"/>
+
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal">
+
+			<Button
+				android:id="@+id/btn_delete_doc"
+				style="@style/MyButton"
+				android:text="@string/btn_delete_doc"/>
+
+			<Button
+				android:id="@+id/btn_delete_field"
+				style="@style/MyButton"
+				android:text="@string/btn_delete_field"/>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</RelativeLayout>

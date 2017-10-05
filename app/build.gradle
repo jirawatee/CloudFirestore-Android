@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+	compileSdkVersion 26
+	buildToolsVersion "26.0.2"
+	defaultConfig {
+		applicationId "com.example.firestore"
+		minSdkVersion 22
+		targetSdkVersion 25
+		versionCode 1
+		versionName "1.0"
+		resConfigs('en', 'xxxhdpi')
+	}
+
+	buildTypes {
+		release {
+			minifyEnabled true
+			proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+		}
+		debug {
+			splits.abi.enable = false
+			splits.density.enable = false
+			aaptOptions.cruncherEnabled = false
+		}
+	}
+
+	dexOptions {
+		preDexLibraries true
+		maxProcessCount 8
+	}
+}
+
+dependencies {
+	implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+	implementation "com.google.firebase:firebase-firestore:$firebaseLibraryVersion"
+}
+
+
+apply plugin: 'com.google.gms.google-services'

@@ -1,0 +1,26 @@
+<resources>
+	<string name="app_name">Firestore</string>
+
+	<string name="btn_add_generated">Add Doc + Generated ID</string>
+	<string name="btn_add_specific">Add Doc + Specific ID</string>
+	<string name="btn_fetch_col">Fetch Collection</string>
+	<string name="btn_fetch_doc">Fetch Document</string>
+	<string name="btn_update_single">Update Single</string>
+	<string name="btn_update_nested">Update Nested</string>
+	<string name="btn_batch">Batch Multiple</string>
+	<string name="btn_delete_doc">Delete Document</string>
+	<string name="btn_delete_field">Delete Field</string>
+	<string name="btn_realtime_doc">Realtime Doc</string>
+	<string name="btn_realtime_multi_doc">Realtime Multi Docs</string>
+	<string name="btn_data_manage">Manage Data</string>
+	<string name="btn_data_query">Query Data</string>
+	<string name="btn_add_sample">Add Sample Data</string>
+
+	<string name="error_required">This field is required</string>
+	<string name="error_no_data">No data found!</string>
+	<string name="error_batch">Batch error!</string>
+
+	<string name="hint_doc_id">Document ID</string>
+	<string name="exit">Press back again to exit</string>
+
+</resources>
