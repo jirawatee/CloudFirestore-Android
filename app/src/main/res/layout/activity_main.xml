@@ -1,22 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<RelativeLayout
 	xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:orientation="horizontal"
-	android:gravity="center"
 	android:padding="@dimen/margin16"
 	tools:context="com.example.firestore.ManageActivity">
 
-	<Button
-		android:id="@+id/btn_data_manage"
-		style="@style/MyButton"
-		android:text="@string/btn_data_manage"/>
+	<ImageView
+		android:layout_width="144dp"
+		android:layout_height="144dp"
+		android:layout_above="@+id/zone_button"
+		android:layout_centerHorizontal="true"
+		android:layout_margin="@dimen/margin16"
+		android:src="@mipmap/ic_launcher"
+		android:contentDescription="@string/app_name"/>
 
-	<Button
-		android:id="@+id/btn_data_query"
-		style="@style/MyButton"
-		android:text="@string/btn_data_query"/>
+	<LinearLayout
+		android:id="@+id/zone_button"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal"
+		android:layout_centerInParent="true">
 
-</LinearLayout>
+		<Button
+			android:id="@+id/btn_data_manage"
+			style="@style/MyButton"
+			android:text="@string/btn_data_manage"/>
+
+		<Button
+			android:id="@+id/btn_data_query"
+			style="@style/MyButton"
+			android:text="@string/btn_data_query"/>
+
+	</LinearLayout>
+
+</RelativeLayout>
