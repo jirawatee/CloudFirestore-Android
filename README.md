@@ -23,10 +23,10 @@ Cloud Firestore code guideline for Android developers
 * Ordering and limit
 
 ## Screenshots
-<table width="100%" cellpadding="8">
+<table width="100%">
 	<tr>
-	  <th><img src="https://user-images.githubusercontent.com/1763410/31247050-a24d9cb0-aa39-11e7-8749-0760e5e545cf.png" width="50%"></th>
-	  <th><img src="https://user-images.githubusercontent.com/1763410/31247091-bc342392-aa39-11e7-9c16-1cb2c5f99ca7.png" width="50%"></th>
+	  <th><img src="https://user-images.githubusercontent.com/1763410/31247050-a24d9cb0-aa39-11e7-8749-0760e5e545cf.png" width="100%"></th>
+	  <th><img src="https://user-images.githubusercontent.com/1763410/31247091-bc342392-aa39-11e7-9c16-1cb2c5f99ca7.png" width="100%"></th>
 	</tr>
 </table>
 
