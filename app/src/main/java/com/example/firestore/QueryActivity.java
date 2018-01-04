@@ -53,6 +53,7 @@ public class QueryActivity extends BaseActivity implements View.OnClickListener{
 		if (mListener != null) {
 			mListener.remove();
 		}
+
 		switch (view.getId()) {
 			case R.id.btn_realtime_doc:
 				addSingleDocListener();
@@ -101,16 +102,16 @@ public class QueryActivity extends BaseActivity implements View.OnClickListener{
 
 	private void addSingleDocListener() {
 		mListener = colRefUsers.document(DOCUMENT_FIREBASE_THAILAND).addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
-			@Override
-			public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
-				if (documentSnapshot != null && documentSnapshot.exists()) {
-					//String source = documentSnapshot.getMetadata().hasPendingWrites() ? "Local" : "Server";
-					//Log.d(TAG, source);
-					showData(documentSnapshot);
-				} else if (e != null) {
-					mTextView.setText(e.getMessage());
-				}
+		@Override
+		public void onEvent(DocumentSnapshot documentSnapshot, FirebaseFirestoreException e) {
+			if (documentSnapshot != null && documentSnapshot.exists()) {
+				//String source = documentSnapshot.getMetadata().hasPendingWrites() ? "Local" : "Server";
+				//Log.d(TAG, source);
+				showData(documentSnapshot);
+			} else if (e != null) {
+				mTextView.setText(e.getMessage());
 			}
+		}
 		});
 	}
 
@@ -127,7 +128,7 @@ public class QueryActivity extends BaseActivity implements View.OnClickListener{
 		//mQuery = colRefUsers.whereGreaterThanOrEqualTo(FIELD_EMAIL, "firebaser@gmail.com");
 		//mQuery = colRefUsers.whereLessThanOrEqualTo(FIELD_EMAIL, "firebaser@gmail.com");
 		//mQuery = colRefUsers.whereEqualTo(FIELD_IS_ADMIN, false).whereEqualTo(FIELD_BORN, 1984);
-		//mQuery = colRefUsers.whereEqualTo(FIELD_IS_ADMIN, false).whereLessThan(FIELD_BORN, 1984);
+		//mQuery = colRefUsers.whereEqualTo(FIELD_IS_ADMIN, false).whereLessThan(FIELD_WEIGHT, 50);
 		//mQuery = colRefUsers.whereGreaterThanOrEqualTo(FIELD_WEIGHT, 40).whereLessThanOrEqualTo(FIELD_WEIGHT, 50);
 		mListener = mQuery.addSnapshotListener(new EventListener<QuerySnapshot>() {
 			@Override

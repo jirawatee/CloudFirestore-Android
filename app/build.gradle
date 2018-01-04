@@ -1,15 +1,16 @@
 apply plugin: 'com.android.application'
 
 android {
-	compileSdkVersion 26
-	buildToolsVersion "26.0.2"
+	compileSdkVersion compileAndTargetSdkVersion
+	buildToolsVersion "27.0.3"
+
 	defaultConfig {
 		applicationId "com.example.firestore"
-		minSdkVersion 22
-		targetSdkVersion 25
+		minSdkVersion 27
+		targetSdkVersion compileAndTargetSdkVersion
 		versionCode 1
 		versionName "1.0"
-		resConfigs('en')
+		resConfigs('en', 'xxxhdpi')
 	}
 
 	buildTypes {
@@ -31,9 +32,10 @@ android {
 }
 
 dependencies {
-	implementation "com.android.support:appcompat-v7:$supportLibraryVersion"
+	implementation ("com.android.support:appcompat-v7:$supportLibraryVersion") {
+		force = true
+	}
 	implementation "com.google.firebase:firebase-firestore:$firebaseLibraryVersion"
 }
-
 
 apply plugin: 'com.google.gms.google-services'
