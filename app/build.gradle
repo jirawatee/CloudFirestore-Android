@@ -6,11 +6,14 @@ android {
 
 	defaultConfig {
 		applicationId "com.example.firestore"
-		minSdkVersion 27
+		minSdkVersion compileAndTargetSdkVersion
 		targetSdkVersion compileAndTargetSdkVersion
 		versionCode 1
 		versionName "1.0"
 		resConfigs('en', 'xxxhdpi')
+		ndk {
+			abiFilters "x86", "x86_64", "arm64-v8a", "armeabi-v7a"
+		}
 	}
 
 	buildTypes {
