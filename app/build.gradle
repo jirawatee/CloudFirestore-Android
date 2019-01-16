@@ -6,7 +6,7 @@ android {
 
 	defaultConfig {
 		applicationId "com.example.firestore"
-		minSdkVersion 27
+		minSdkVersion 28
 		targetSdkVersion compileAndTargetSdkVersion
 		versionCode 1
 		versionName "1.0"
@@ -38,7 +38,8 @@ dependencies {
 	implementation ("com.android.support:appcompat-v7:$supportLibraryVersion") {
 		force = true
 	}
-	implementation "com.google.firebase:firebase-firestore:17.1.1"
+	implementation "com.google.firebase:firebase-core:16.0.6"
+	implementation "com.google.firebase:firebase-firestore:17.1.5"
 }
 
 apply plugin: 'com.google.gms.google-services'
