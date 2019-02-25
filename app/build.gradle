@@ -38,8 +38,8 @@ dependencies {
 	implementation ("com.android.support:appcompat-v7:$supportLibraryVersion") {
 		force = true
 	}
-	implementation "com.google.firebase:firebase-core:16.0.6"
-	implementation "com.google.firebase:firebase-firestore:17.1.5"
+	implementation "com.google.firebase:firebase-core:16.0.7"
+	implementation "com.google.firebase:firebase-firestore:18.0.1"
 }
 
 apply plugin: 'com.google.gms.google-services'
