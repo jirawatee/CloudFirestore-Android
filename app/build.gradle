@@ -35,9 +35,9 @@ android {
 }
 
 dependencies {
-	implementation 'androidx.appcompat:appcompat:1.0.2'
+	implementation 'androidx.appcompat:appcompat:1.1.0'
 	implementation "com.google.firebase:firebase-core:17.2.0"
-	implementation "com.google.firebase:firebase-firestore:21.0.0"
+	implementation "com.google.firebase:firebase-firestore:21.1.0"
 }
 
 apply plugin: 'com.google.gms.google-services'
