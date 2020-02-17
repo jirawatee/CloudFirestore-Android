@@ -1,9 +1,10 @@
 package com.example.firestore;
 
 import android.os.Bundle;
-import androidx.annotation.NonNull;
 import android.view.View;
 import android.widget.EditText;
+
+import androidx.annotation.NonNull;
 
 import com.example.firestore.helpers.MyDialog;
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -15,6 +16,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreSettings;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.WriteBatch;
 
@@ -23,13 +25,26 @@ import java.util.Map;
 
 public class ManageActivity extends BaseActivity implements View.OnClickListener{
 	private EditText mEditText;
-	private FirebaseFirestore db = FirebaseFirestore.getInstance();
-	private CollectionReference colRefUsers = db.collection(COLLECTION_USERS);
+	private FirebaseFirestore db;
+	private CollectionReference colRefUsers;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_manage);
+
+		FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
+				.setHost("10.0.2.2:8080")
+				.setSslEnabled(false)
+				.setPersistenceEnabled(false)
+				.build();
+
+		db = FirebaseFirestore.getInstance();
+
+		//db.setFirestoreSettings(settings);
+
+		colRefUsers = db.collection(COLLECTION_USERS);
+
 		bindWidget();
 	}
 
